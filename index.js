@@ -298,7 +298,7 @@ function addArtist(array) {
   let newArtist = {
     id: 20,
     name: "Jose Zaragoza",
-    years: "1994 - current day",
+    years: "1994 - Current Day",
     genre: "Web Design",
     nationality: "Mexican",
     bio: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, suscipit incidunt excepturi beatae cum necessitatibus fuga minus eum, aliquam laboriosam modi? Similique, amet vel expedita cumque ex officia eaque sunt.",
@@ -316,9 +316,17 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(array) {
+  let moreThan = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].paintings > 100) {
+      moreThan.push(array[i].name);
+    }
+  }
+  return moreThan;
 }
+
+console.log(lotsOfArt(artists));
 
 /* ***** END OF TASKS ***** */
 
